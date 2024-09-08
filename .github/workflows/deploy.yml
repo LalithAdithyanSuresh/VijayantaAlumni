@@ -51,7 +51,7 @@ jobs:
 
 
     Custom_Domain:
-      name: Deploy
+      name: Adding custom domain
       needs: build
       runs-on: ubuntu-latest
       if: github.ref == 'refs/heads/main'
