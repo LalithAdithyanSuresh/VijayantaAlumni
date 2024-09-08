@@ -5,7 +5,7 @@ import Navbar from './components/Navbar.jsx'
 import { GoogleOAuthProvider } from "@react-oauth/google"
 
 createRoot(document.getElementById('root')).render(
-  <GoogleOAuthProvider clientId='1009282809407-sh8h2kgmot2q295a503sl5530pldnaj9.apps.googleusercontent.com'>
+  <GoogleOAuthProvider clientId='391503520977-j03sl4e4qvbpsifhaagmmq435urc0mb7.apps.googleusercontent.com'>
     <StrictMode>
       <Navbar></Navbar>
     </StrictMode>
