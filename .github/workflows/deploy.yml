@@ -43,18 +43,11 @@ jobs:
             name: production-files
             path: ./dist
 
+        - name: Create CNAME file
+          run: echo "vijayanthaalumni.net" > ./dist/CNAME
+
         - name: Deploy to GitHub Pages
           uses: peaceiris/actions-gh-pages@v3
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./dist
-
-
-    Custom_Domain:
-      name: Adding custom domain
-      needs: build
-      runs-on: ubuntu-latest
-      if: github.ref == 'refs/heads/main'
-      steps:
-          - name: Create CNAME file
-            run: echo "vijayanthaalumni.net" > ./dist/CNAME
