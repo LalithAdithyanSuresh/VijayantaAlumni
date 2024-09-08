@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import PageChoose from './pageChoose.jsx';
+import PageChoose from 'PageChoose.jsx';
 
 function Navbar(){
     const [page,setPage] = useState(0);
