@@ -28,6 +28,7 @@ jobs:
         with:
           name: production-files
           path: ./dist
+  
 
   deploy:
     name: Deploy
@@ -41,6 +42,9 @@ jobs:
         with:
           name: production-files
           path: ./dist
+
+      - name: Create CNAME file
+        run: echo "vijayanthaalumni.net" > ./dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
