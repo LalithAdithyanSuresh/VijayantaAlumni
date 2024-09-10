@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import {Outlet} from 'react-router-dom';
 
 function Basic() {
     return ( 
         <>
-        <Navbar></Navbar>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-        </BrowserRouter>
+            <Navbar />
+            <Outlet />
         </>
      );
 }
