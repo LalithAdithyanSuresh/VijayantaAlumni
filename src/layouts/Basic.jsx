@@ -6,6 +6,9 @@ function Basic() {
     return ( 
         <>
             <Navbar />
+            <Navbar />
+            <Navbar />
+            <Navbar />
             <Outlet />
         </>
      );
