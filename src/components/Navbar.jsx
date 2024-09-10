@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import PageChoose from './PageChoose.jsx';
-
+import NavLinks from './Buttons/NavLinks.jsx';
 function Navbar(){
     const [page,setPage] = useState(0);
-
     const [nav,setNav] = useState(true)
     const handleNav = () => {
         setNav(!nav)
@@ -19,23 +18,24 @@ function Navbar(){
                     </a>
                 </div>
                 <div className="hidden md:flex items-center space-x-4">
-                    <a onClick={() =>setPage(0)} className="text-gray-700  bg-white p-4 hover:text-[#3572EF]">Home</a>
-                    <a onClick={() =>setPage(1)} className="text-gray-700  bg-white p-4 hover:text-[#3572EF]">Events</a>
-                    <a onClick={() =>setPage(2)} className="text-gray-700  bg-white p-4 hover:text-[#3572EF]">Gallery</a>
-                    <a onClick={() =>setPage(3)} className="text-gray-700  bg-white p-4 hover:text-[#3572EF]">Sign Up</a>
+                    <NavLinks text={"Home"} code={0} c={page==0 ? 1 : 0} setPage={setPage}></NavLinks>
+                    <NavLinks text={"Events"} code={1} c={page==1 ? 1 : 0} setPage={setPage}></NavLinks>
+                    <NavLinks text={"Gallery"} code={2} c={page==2 ? 1 : 0} setPage={setPage}></NavLinks>
+
+                    <a onClick={() =>setPage(3)} className={page==3 ? "text-white  bg-[#3572EF] p-2 font-medium cursor-pointer border-2 border-[#3572EF] rounded m-2" : "text-white  bg-[#3572EF] p-2 m-2 hover:text-[#3572EF] hover:bg-white font-medium border-2 border-[#3572EF] rounded  cursor-pointer"}>Sign Up</a>
                 </div>
                 <div onClick={handleNav} className='block md:hidden'>
                     {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20}/>}
                 </div>
             </div>
-                <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full border-r-2 border-r-gray-200 flex flex-col uppercase p-4 bg-white ease-in-out duration-500' : 'fixed left-[-100%] top-0 flex flex-col'}>
+                <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full border-r-2 border-r-gray-200 flex flex-col uppercase p-4 bg-white ease-in-out duration-500' : 'fixed left-[-100%] top-0 flex flex-col ease-in-out duration-500'}>
                     <a href="#navbar" className="flex-shrink-0 text-2xl font-bold text-[#3572EF] mb-8 ">
                         VIJAYANTA ALUMNI
                     </a>
-                    <a href="#" className="text-gray-700  bg-white p-4 hover:text-[#3572EF] border-b">Home</a>
-                    <a href="#" className="text-gray-700  bg-white p-4 hover:text-[#3572EF] border-b">Events</a>
-                    <a href="#" className="text-gray-700  bg-white p-4 hover:text-[#3572EF] border-b">Gallery</a>
-                    <a href="#" className="text-gray-700  bg-white p-4 hover:text-[#3572EF]">Sign Up</a>
+                    <NavLinks text={"Home"} code={0} c={page==0 ? 1 : 0} setPage={setPage} handleNav={handleNav}></NavLinks>
+                    <NavLinks text={"Events"} code={1} c={page==1 ? 1 : 0} setPage={setPage} handleNav={handleNav}></NavLinks>
+                    <NavLinks text={"Gallery"} code={2} c={page==2 ? 1 : 0} setPage={setPage} handleNav={handleNav}></NavLinks>
+                    <NavLinks text={"Sign Up"} code={3} c={page==3 ? 1 : 0} setPage={setPage} handleNav={handleNav}></NavLinks>
                 </div>
         </div>
         <PageChoose x={page}></PageChoose>

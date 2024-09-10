@@ -45,6 +45,7 @@ function SignUp() {
                     <h3>User Logged in</h3>
                     <p>Name: {profile.name}</p>
                     <p>Email Address: {profile.email}</p>
+                    <p>Phone Num: {profile}</p>
                     <br />
                     <br />
                     <button onClick={logOut}>Log out</button>
