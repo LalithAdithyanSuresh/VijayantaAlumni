@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import PageChoose from './PageChoose.jsx';
 import NavLinks from './Buttons/NavLinks.jsx';
+import { NavLink } from 'react-router-dom';
 function Navbar(){
     const [page,setPage] = useState(0);
     const [nav,setNav] = useState(true)
@@ -18,11 +18,10 @@ function Navbar(){
                     </a>
                 </div>
                 <div className="hidden md:flex items-center space-x-4">
-                    <NavLinks text={"Home"} code={0} c={page==0 ? 1 : 0} setPage={setPage}></NavLinks>
-                    <NavLinks text={"Events"} code={1} c={page==1 ? 1 : 0} setPage={setPage}></NavLinks>
-                    <NavLinks text={"Gallery"} code={2} c={page==2 ? 1 : 0} setPage={setPage}></NavLinks>
-
-                    <a onClick={() =>setPage(3)} className={page==3 ? "text-white  bg-[#3572EF] p-2 font-medium cursor-pointer border-2 border-[#3572EF] rounded m-2" : "text-white  bg-[#3572EF] p-2 m-2 hover:text-[#3572EF] hover:bg-white font-medium border-2 border-[#3572EF] rounded  cursor-pointer"}>Sign Up</a>
+                    <NavLinks text={"Home"} code={0} c={page==0 ? 1 : 0} setPage={setPage} route={'/'}></NavLinks>
+                    <NavLinks text={"Events"} code={1} c={page==1 ? 1 : 0} setPage={setPage} route={'events'}></NavLinks>
+                    <NavLinks text={"Gallery"} code={2} c={page==2 ? 1 : 0} setPage={setPage} route={'gallery'}></NavLinks>
+                    <NavLink to={'/signup'} className={page==3 ? "text-white  bg-[#3572EF] p-2 font-medium cursor-pointer border-2 border-[#3572EF] rounded m-2" : "text-white  bg-[#3572EF] p-2 m-2 hover:text-[#3572EF] hover:bg-white font-medium border-2 border-[#3572EF] rounded  cursor-pointer"}>Sign Up</NavLink>
                 </div>
                 <div onClick={handleNav} className='block md:hidden'>
                     {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20}/>}
@@ -32,13 +31,12 @@ function Navbar(){
                     <a href="#navbar" className="flex-shrink-0 text-2xl font-bold text-[#3572EF] mb-8 ">
                         VIJAYANTA ALUMNI
                     </a>
-                    <NavLinks text={"Home"} code={0} c={page==0 ? 1 : 0} setPage={setPage} handleNav={handleNav}></NavLinks>
-                    <NavLinks text={"Events"} code={1} c={page==1 ? 1 : 0} setPage={setPage} handleNav={handleNav}></NavLinks>
-                    <NavLinks text={"Gallery"} code={2} c={page==2 ? 1 : 0} setPage={setPage} handleNav={handleNav}></NavLinks>
-                    <NavLinks text={"Sign Up"} code={3} c={page==3 ? 1 : 0} setPage={setPage} handleNav={handleNav}></NavLinks>
+                    <NavLinks text={"Home"} code={0} c={page==0 ? 1 : 0} setPage={setPage} handleNav={handleNav} route={'/'}></NavLinks>
+                    <NavLinks text={"Events"} code={1} c={page==1 ? 1 : 0} setPage={setPage} handleNav={handleNav} route={'/events'}></NavLinks>
+                    <NavLinks text={"Gallery"} code={2} c={page==2 ? 1 : 0} setPage={setPage} handleNav={handleNav} route={'/gallery'}></NavLinks>
+                    <NavLinks text={"Sign Up"} code={3} c={page==3 ? 1 : 0} setPage={setPage} handleNav={handleNav} route={'/signup'}></NavLinks>
                 </div>
         </div>
-        <PageChoose x={page}></PageChoose>
         </>
     );
 }
