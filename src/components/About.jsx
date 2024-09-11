@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 function About() {
     return ( 
-        <div className='w-full h-screen flex items-center justify-center'>
+        <div className='w-full h-fit flex items-center justify-center'>
             <div className='text-xl   max-w-[1024px] text-center'>
                 <p>
                 Welcome to the Vijayantha Schools Alumni Association which includes Vijayanta Senior Secondary school(VSSS) & Vijayantha Model Higher Secondary School(VMHSS) .
