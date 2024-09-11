@@ -17,7 +17,7 @@ function Navbar(){
     return(
         <>
         <div className="fixed top-0 left-0 w-screen flex justify-center" id="navbar">
-            <div className="flex justify-between h-16 px-3 m-auto max-w-[1240px] items-center border-b-[#A7E6FF] border-b-2 backdrop-blur-sm w-full">
+            <div className="flex justify-between h-16 px-3 m-auto max-w-[1240px] items-center border-b-[#A7E6FF] border-b-2 bg-white w-full"> {/*temporarily removed  backdrop-blur-sm */}
                 <div className="flex items-center">
                     <NavLink to={'/'} className="flex-shrink-0 text-2xl font-bold text-[#3572EF] ">
                         VIJAYANTA ALUMNI
