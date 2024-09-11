@@ -15,7 +15,7 @@ function JoinWhatsapp({link1,link2}) {
 
     return ( 
         <>
-        <div className={OverallStyle} onClick={toggle}>
+        <div className={OverallStyle} onClick={toggle}> 
             <div  className='relative z-10'>
                 <img src={WA_Logo} alt="WhatsApp Logo top" />
             </div>
