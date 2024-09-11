@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import WA_Logo from "@/assets/Logo/WA_Logo.svg";
+import WA_Logo from "@assets/Logo/Whatsapp.svg";
 // COLOR : #43b740   ( Whatsapp Green )
 function JoinWhatsapp({link}) {
     return ( 
