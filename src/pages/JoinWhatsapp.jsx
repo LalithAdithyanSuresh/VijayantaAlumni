@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 
 function JoinWhatsapp({link}) {
-    return (  );
+    return ( 
+        <>
+        <div>WHATSAPP okie</div>
+        </>
+     );
 }
 
 export default JoinWhatsapp;
