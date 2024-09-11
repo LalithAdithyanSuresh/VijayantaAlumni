@@ -10,7 +10,6 @@ function Hero() {
                 <p className='text-center text-[#3572EF] font-bold text-3xl md:text-6xl md:p-10'>Vijayanta Schools Alumni Association</p>
             </div>
         </div>
-        <About />
         </>
     );
 }
