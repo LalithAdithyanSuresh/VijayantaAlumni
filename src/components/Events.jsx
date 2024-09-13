@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EventCard from './EventCard'
+import YearCard from './YearCard'
+import TimelineBuffer from './TimelineBuffer'
 
 const Events = () => {
+    const [showYear,setYear] = useState(2024)
   return (
     <div className='mt-20'>
         <EventCard date={'11'} month={'Sep'} header={'Sunshine Rainbow White Pony'}>
