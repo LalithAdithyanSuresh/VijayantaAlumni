@@ -24,8 +24,11 @@ function Navbar(){
                     </NavLink>
                 </div>
                 <div className="hidden md:flex items-center space-x-4">
-                    <NavLink to='/' className={buttonClass}>
+                <NavLink to='/' className={buttonClass}>
                         Home
+                    </NavLink>
+                    <NavLink to='/connect' className={buttonClass}>
+                        Connect
                     </NavLink>
                     <NavLink to='/events' className={buttonClass}>
                         Events
@@ -47,6 +50,9 @@ function Navbar(){
                     </NavLink>
                     <NavLink to='/' className={buttonClass} onClick={handleNav}>
                         Home
+                    </NavLink>
+                    <NavLink to='/connect' className={buttonClass} onClick={handleNav}>
+                        Connect
                     </NavLink>
                     <NavLink to='/events' className={buttonClass} onClick={handleNav}>
                         Events

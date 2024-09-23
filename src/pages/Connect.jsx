@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Connct() {
+function Connect() {
   return (
     <div>
-      
+      asddwrfew
     </div>
   )
 }
 
-export default Connct
+export default Connect
