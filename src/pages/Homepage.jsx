@@ -8,7 +8,7 @@ const Homepage = () => {
     <>
         <Hero />
         <About />
-        <JoinWhatsapp link1 = "https://www.youtube.com/watch?v=k85mRPqvMbE" link2="https://www.youtube.com/watch?v=astISOttCQ0" />
+        {/* <JoinWhatsapp link1 = "https://www.youtube.com/watch?v=k85mRPqvMbE" link2="https://www.youtube.com/watch?v=astISOttCQ0" /> */}
     </>
   )
 }

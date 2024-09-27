@@ -1,5 +1,5 @@
 import React from 'react'
-
+import GridImage from './Image/GridImage';
 const EventCard = ({children, date, month, header}) => {
     return (
         <div className='m-auto max-w-[1240px] items-center'>
@@ -14,17 +14,16 @@ const EventCard = ({children, date, month, header}) => {
                 </div>
 
                 <div className='row-span-2 mt-3'>
-                    <div className='font-bold'>
+                    <div className='font-bold mb-4 text-3xl'>
                         {header}
                     </div>
-                    <div>
-                        {children}
+                    <div className='mb-8'>
+                        <GridImage Images={children}></GridImage>
                     </div>                    
                 </div>
                 
                 <div className='flex items-center justify-center h-full w-full'>
                     <div className='h-full w-1 rounded-md bg-[#3572EF]'>
-
                     </div>
                 </div>
             </div>
