@@ -13,12 +13,14 @@ import HomePage from "./pages/Homepage.jsx";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import SignUpPage from "./pages/SignUpPage.jsx";
 import EventsPage from "./pages/EventsPage.jsx";
+import Connect from "./pages/Connect.jsx"
 import JoinWhatsapp from "./components/Buttons/JoinWhatsapp.jsx";
 
 const router = createBrowserRouter( 
   createRoutesFromElements(
     <Route path="/" element={<Basic />}>
       <Route index element={<HomePage />} />
+      <Route path='/connect' element={ <Connect /> } /> 
       <Route path='/signup' element={ <SignUpPage /> } /> 
       <Route path="/events" element={<EventsPage />} />
     </Route>

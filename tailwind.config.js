@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
       animation: {
         'PulseSize': 'zoomInOut 2s linear infinite',
       },

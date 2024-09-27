@@ -16,16 +16,19 @@ function Navbar(){
     }
     return(
         <>
-        <div className="fixed top-0 left-0 w-screen flex justify-center" id="navbar">
-            <div className="flex justify-between h-16 px-3 m-auto max-w-[1240px] items-center border-b-[#A7E6FF] border-b-2 backdrop-blur-sm w-full">
+        <div className="fixed top-0 left-0 w-screen flex justify-center z-50" id="navbar">
+            <div className="flex justify-between h-16 px-3 m-auto max-w-[1240px] items-center border-b-[#A7E6FF] border-b-2 bg-white w-full"> {/*temporarily removed  backdrop-blur-sm */}
                 <div className="flex items-center">
                     <NavLink to={'/'} className="flex-shrink-0 text-2xl font-bold text-[#3572EF] ">
                         VIJAYANTA ALUMNI
                     </NavLink>
                 </div>
                 <div className="hidden md:flex items-center space-x-4">
-                    <NavLink to='/' className={buttonClass}>
+                <NavLink to='/' className={buttonClass}>
                         Home
+                    </NavLink>
+                    <NavLink to='/connect' className={buttonClass}>
+                        Connect
                     </NavLink>
                     <NavLink to='/events' className={buttonClass}>
                         Events
@@ -47,6 +50,9 @@ function Navbar(){
                     </NavLink>
                     <NavLink to='/' className={buttonClass} onClick={handleNav}>
                         Home
+                    </NavLink>
+                    <NavLink to='/connect' className={buttonClass} onClick={handleNav}>
+                        Connect
                     </NavLink>
                     <NavLink to='/events' className={buttonClass} onClick={handleNav}>
                         Events
