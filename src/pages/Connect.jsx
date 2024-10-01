@@ -1,10 +1,8 @@
 import React from 'react'
-
+import WhatsappHero from '../components/WhatsappHero'
 function Connect() {
   return (
-    <div>
-      asddwrfew
-    </div>
+    <WhatsappHero/>
   )
 }
 

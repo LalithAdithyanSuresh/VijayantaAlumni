@@ -3,7 +3,7 @@ import GridImage from './Image/GridImage';
 const EventCard = ({children, date, month, header}) => {
     return (
         <div className='m-auto max-w-[1240px] items-center'>
-            <div className={`grid grid-cols-[100px_1fr] grid-rows-[70px_1fr] grid-flow-cols`}>
+            <div className={`grid sm:grid-cols-[100px_1fr] grid-rows-[70px_1fr] grid-flow-cols mr-4 grid-cols-[60px_1fr]`}>
                 <div className='flex flex-col items-center justify-center'>
                     <div className='flex items-center justify-center text-white text-center font-semibold bg-[#3572EF] rounded-full aspect-square h-8'> {/*top left*/}
                         {date}
